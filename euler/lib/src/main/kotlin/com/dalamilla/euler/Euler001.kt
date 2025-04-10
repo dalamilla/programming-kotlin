@@ -12,17 +12,17 @@ package com.dalamilla.euler
  * @author dalamilla
  */
 class Euler001 {
-  companion object {
+    companion object {
 
-    /**
-     * Solution of first Euler problem.
-     *
-     * [n] Value that limit the sum of natural numbers.
-     *
-     * @return Sum of natural numbers that are multiples of 3 or 5 below n.
-     */
-    fun solution(n: Int): Int {
-      return (1..n - 1).filter { it % 3 == 0 || it % 5 == 0 }.sum()
+        /**
+         * Solution of first Euler problem.
+         *
+         * [n] Value that limit the sum of natural numbers.
+         *
+         * @return Sum of natural numbers that are multiples of 3 or 5 below n.
+         */
+        fun solution(n: Int): Int {
+            return (1..n - 1).filter { it % 3 == 0 || it % 5 == 0 }.sum()
+        }
     }
-  }
 }

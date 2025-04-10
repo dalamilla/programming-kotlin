@@ -11,28 +11,28 @@ package com.dalamilla.euler
  * @author dalamilla
  */
 class Euler003 {
-  companion object {
+    companion object {
 
-    /**
-     * Solution of third Euler problem.
-     *
-     * [n] Value that find max prime factor.
-     *
-     * @return The largest prime factor.
-     */
-    fun solution(n: Long): Long {
-      var pm: Long = 2
-      var n = n
+        /**
+         * Solution of third Euler problem.
+         *
+         * [n] Value that find max prime factor.
+         *
+         * @return The largest prime factor.
+         */
+        fun solution(n: Long): Long {
+            var pm: Long = 2
+            var n = n
 
-      while (n != 1L) {
-        if (n % pm == 0L) {
-          n = n / pm
-        } else {
-          pm += 1
+            while (n != 1L) {
+                if (n % pm == 0L) {
+                    n = n / pm
+                } else {
+                    pm += 1
+                }
+            }
+
+            return pm
         }
-      }
-
-      return pm
     }
-  }
 }

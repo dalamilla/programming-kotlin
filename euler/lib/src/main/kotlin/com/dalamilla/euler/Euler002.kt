@@ -14,19 +14,21 @@ package com.dalamilla.euler
  * @author dalamilla
  */
 class Euler002 {
-  companion object {
+    companion object {
 
-    /**
-     * Solution of second Euler problem.
-     *
-     * [n] Value that limit the sum of Fibonacci numbers.
-     *
-     * @return Sum of even Fibonacci numbers below n.
-     */
-    fun solution(n: Int): Int {
-      val fibsequence =
-        generateSequence(Pair(0, 1), { Pair(it.second, it.first + it.second) }).map { it.first }
-      return fibsequence.takeWhile { it <= n }.filter { it % 2 == 0 }.sum()
+        /**
+         * Solution of second Euler problem.
+         *
+         * [n] Value that limit the sum of Fibonacci numbers.
+         *
+         * @return Sum of even Fibonacci numbers below n.
+         */
+        fun solution(n: Int): Int {
+            val fibsequence =
+                generateSequence(Pair(0, 1), { Pair(it.second, it.first + it.second) }).map {
+                    it.first
+                }
+            return fibsequence.takeWhile { it <= n }.filter { it % 2 == 0 }.sum()
+        }
     }
-  }
 }

@@ -13,32 +13,33 @@ package com.dalamilla.euler
  * @author dalamilla
  */
 class Euler005 {
-  companion object {
+    companion object {
 
-    /**
-     * Solution of fifth Euler problem.
-     *
-     * [n] Value that limit the smallest positive number that is evenly divisible from 1 to n.
-     *
-     * @return Smallest positive number that is evenly divisible by all of the numbers from 1 to n.
-     */
-    fun solution(n: Int): Int {
-      var found = true
-      var number = 0
+        /**
+         * Solution of fifth Euler problem.
+         *
+         * [n] Value that limit the smallest positive number that is evenly divisible from 1 to n.
+         *
+         * @return Smallest positive number that is evenly divisible by all of the numbers from 1 to
+         *   n.
+         */
+        fun solution(n: Int): Int {
+            var found = true
+            var number = 0
 
-      while (found) {
-        var i = 1
-        number += n
+            while (found) {
+                var i = 1
+                number += n
 
-        while (number % i == 0 && i <= n) {
-          if (i == n) {
-            found = false
-          }
-          i++
+                while (number % i == 0 && i <= n) {
+                    if (i == n) {
+                        found = false
+                    }
+                    i++
+                }
+            }
+
+            return number
         }
-      }
-
-      return number
     }
-  }
 }
