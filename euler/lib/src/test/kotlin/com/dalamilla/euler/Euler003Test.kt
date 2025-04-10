@@ -11,13 +11,13 @@ class Euler003Test {
   @TestFactory
   fun test() =
     listOf<Pair<Long, Long>>(
-        2 to 2,
-        3 to 3,
-        5 to 5,
-        7 to 7,
-        8 to 2,
-        13195 to 29,
-        600851475143 to 6857,
+        2L to 2L,
+        3L to 3L,
+        5L to 5L,
+        7L to 7L,
+        8L to 2L,
+        13195L to 29L,
+        600851475143L to 6857L,
       )
       .map { (input, expected) ->
         DynamicTest.dynamicTest("The largest prime factor of $input: $expected") {
